@@ -54,14 +54,16 @@ class Widget extends React.Component {
       )
     );
 
+
     return (
-      <div>
+      <div className="currency">
         <h1>Currency Exchange Rates</h1>
         <h3>Base Currency: {baseCurrency}</h3>
-
+        <p>Get Rates:</p>
         <div className="currency-selector">
-          Get Rates:
-          {currencyOptions}
+
+            {currencyOptions}
+
         </div>
         <div className="rates-list">
           {currencyRates}

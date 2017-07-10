@@ -1,3 +1,7 @@
+.currency {
+    text-align: center;
+}
+
 .red {
   color: red;
 }
@@ -8,13 +12,19 @@
 
 .currency-selector {
   display: inline-block;
+  color: blue;
+  cursor: pointer;
+  margin-right: 20px;
+
 }
 
 .currency-option {
   float: right;
-  padding-left: 5px;
+  padding-left: 10px;
+  margin-right: 10px;
 }
 
 .rates-list {
   padding-top: 10px;
+  border: 2px solid black;
 }

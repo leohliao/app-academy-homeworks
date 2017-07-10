@@ -1,6 +1,6 @@
 import React from 'react';
 import Currency from './currency';
-import selectCurrency from '../actions';
+import { selectCurrency, clearCurrency } from '../actions';
 
 class Widget extends React.Component {
 
@@ -12,6 +12,7 @@ class Widget extends React.Component {
     this.props.store.subscribe(this.forceUpdate);
     this.currencies = ["USD", "EUR", "CAD", "JPY", "GBP", "CNY"];
     this.selectCurrency = selectCurrency.bind(this);
+    this.clearCurrency = clearCurrency.bind(this);
   }
 
   fetchRates(currency) {
@@ -60,6 +61,9 @@ class Widget extends React.Component {
         <h1>Currency Exchange Rates</h1>
         <h3>Base Currency: {baseCurrency}</h3>
         <p>Get Rates:</p>
+        <button onClick={clearCurrency}>Clear</button>
+        <br />
+        <br />
         <div className="currency-selector">
 
             {currencyOptions}

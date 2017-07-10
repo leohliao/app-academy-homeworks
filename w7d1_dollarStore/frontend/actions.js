@@ -1,9 +1,15 @@
 
-const selectCurrency = (baseCurrency, rates) => ({
+export const selectCurrency = (baseCurrency, rates) => ({
     type: "SWITCH_CURRENCY",
     baseCurrency,
     rates
   });
 
-export default selectCurrency;
+export const clearCurrency = (baseCurrency, rates) => ({
+  type: "CLEAR",
+  baseCurrency: "",
+  rates: {}
+});
+
+
 window.selectCurrency = selectCurrency;
